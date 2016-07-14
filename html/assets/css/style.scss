@@ -1,0 +1,163 @@
+
+$mainFont: Candara Regular;
+$mainColor: #4fd7e2;
+
+
+
+
+
+
+
+
+html, body
+{
+    margin: 0px ;
+    padding: 0px;
+    font-family: $mainFont;    
+}
+
+
+
+header
+{
+    background: url(../images/headerBg.jpg) 0px 0px no-repeat ;
+    background-size: cover;
+    
+}
+
+#top-bar
+{
+    padding-top: 22px;    
+}
+
+#top-phone
+{
+    color:#fff;
+    font-size: 20pt;
+    padding-top: 14px;
+    text-align: center;
+}
+
+#top-menu
+{
+    
+            list-style: none;
+            padding: 0px;
+            padding-top: 17px;
+            
+        
+    
+        li{
+            display: inline-block;
+            /*margin-right: 15px;*/
+        }
+        
+        li:last-child a{
+            /*margin-right: 0px;*/
+            padding-right: 0px;
+            padding-left: 0px;
+        }
+       
+        a {
+                color: #fff;
+                font-size: 16pt;
+                font-family: 'DaunPenh Regular';
+                position: relative;
+                text-decoration: none;
+                padding-left:7.5px;
+                padding-right:7.5px;                
+            }
+    
+        a:before
+        {
+            content: '';
+            display: block;
+            width:0%;
+            height: 1px;
+            background: #fff;
+            position: absolute;
+            z-index: 10;
+            top: 108%;
+            left: 100%;
+            transition: all linear 0.3s; 
+        }
+               
+        
+        a:after
+        {
+            content: '';
+            display: block;
+            width:1px;
+            height: 100%;
+            background: #fff;
+            position: absolute;
+            z-index: 20;
+            top: 0%;
+            right: 0px;
+            direction:trl;
+            transition: all linear 0.3s; 
+        }
+        
+          li:last-child a:after
+        {
+            content: '';
+            display: none;
+            
+        }
+        
+        
+        a:hover:after
+        {        
+            height: 0px;
+            top:100%;            
+        }
+        a:hover:before
+        {
+            width: 100%;
+            left: 0%;
+        }
+        
+    
+}
+
+
+.banner-block
+{
+    margin: 80px auto;
+    width: 60%;
+    color: #fff;
+    text-align: center;
+    padding-bottom: 20px;
+    
+    h1
+    {
+        font-size: 39pt;        
+        font-weight: normal;        
+    }
+    
+    .content-text
+    {        
+        margin-top: 30px;
+        font-size: 20pt;        
+    }
+    
+    .btn-call-form
+    {
+        padding: 8px 25px;
+        background-color: $mainColor;
+        font-size: 25pt;
+        display: inline-block;
+        box-shadow:  0px 0px 15px 5px  rgba(255, 255, 255, 0.8);
+        border: 1px solid #fff;
+        margin-top: 40px;
+        color:#fff;
+        text-decoration: none;
+        transition: box-shadow ease 0.3s;  
+    }
+    
+    .btn-call-form:hover
+    {
+        box-shadow:  0px 0px 25px 10px  rgba(255, 255, 255, 0.8);
+    }
+    
+}
