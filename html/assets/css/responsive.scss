@@ -1,0 +1,117 @@
+
+$mainColor: #4fd7e2;
+$mobile-phone-width:750px;
+$tablet-width:970px;
+
+/* Mobile phone */
+
+@media screen and (max-width: $mobile-phone-width)
+{
+    #logo  img
+    {
+        margin: 0px auto;
+    }
+    
+  
+  #top-menu
+  {
+    position: static;
+    
+    #mob-menu-btn
+    {
+        display: block;
+    }    
+    
+    ul
+    {
+        display: none;        
+        background-color: #fff;
+        position: absolute;
+        left: 0%;
+        width: 100%;
+        z-index: 100;
+        
+    }
+    
+    li
+    {
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding: 6px;
+    }
+    a{
+        color: $mainColor;
+    }
+    
+    a:before{
+        content: '';
+        width: 100%;
+        left: 0px;
+        background: $mainColor;
+    }
+    
+    
+  }
+  
+  #stages{
+    .stage-wrapp
+    {
+      width: 100%;    
+    }
+    .item
+    {
+        margin-top: 60px;
+        width: 80%;
+    }
+    .item .link,
+    .item.right .link
+    {
+        left: 45px;
+        bottom: -70px;
+        height: 70px;
+        background: url(../images/stageLinkDown.png) left -74px no-repeat;
+    }
+    
+    .item.right
+    {
+        margin-left: 0px;
+        margin-top: 60px;
+    }
+    .item.final
+    {
+        margin-left: 0px;
+    }
+    
+  }
+  
+  #contacts .form-wrapp
+  {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+ 
+
+}
+
+/*Tablet*/
+@media screen and (max-width: $tablet-width)
+{
+    
+    #price-list .price-box,    
+    #price-list .price-box.center-price
+    {
+        margin-top: 20px;
+    }  
+    
+    #reviews-carousel 
+    {
+        width: 100%;
+    }
+    
+    #counters .item
+    {
+        margin-top: 20px;
+    }
+    
+}
