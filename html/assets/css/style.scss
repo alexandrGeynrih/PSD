@@ -1,5 +1,5 @@
 
-$mainFont: Candara Regular;
+$mainFont: 'Candara Regular';
 $mainColor: #4fd7e2;
 $section-title-color:#38969e;
 
@@ -181,7 +181,8 @@ header
         margin-top: 40px;
         color:#fff;
         text-decoration: none;
-        transition: box-shadow ease 0.3s;  
+        transition: box-shadow ease 0.3s;
+        outline: none;
     }
     
     .btn-call-form:hover
@@ -1095,4 +1096,40 @@ footer{
 #scroll-top:hover
 {
     opacity: 1;
+}
+
+
+#callback-popup {
+    
+    .modal-title{
+        text-align: center;
+        color: $section-title-color;
+        font-size: 16pt;
+        font-weight: bold;
+    }
+    
+    .form-wrapp button
+    {        
+        padding: 7px 10px;
+        background: #fff;
+        color: $mainColor;
+        font-size: 14pt;
+        text-align: center;
+        width: 100px;
+        margin: 0px auto;
+        display: block;
+        font-weight: bold;
+        border-color: $mainColor;        
+    }
+    
+    .form-wrapp .input-group-addon{
+        background: #fff;
+        color: $mainColor;        
+    }
+    .form-wrapp .form-control
+    {
+        border-color: $mainColor;        
+    }
+    
+    
 }

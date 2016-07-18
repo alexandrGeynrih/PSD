@@ -2,7 +2,7 @@ html, body {
   margin: 0px;
   padding: 0px;
   overflow-x: hidden;
-  font-family: Candara Regular; }
+  font-family: "Candara Regular"; }
 
 header {
   background: url(../images/headerBg.jpg) 0px 0px no-repeat;
@@ -112,7 +112,8 @@ header {
     margin-top: 40px;
     color: #fff;
     text-decoration: none;
-    transition: box-shadow ease 0.3s; }
+    transition: box-shadow ease 0.3s;
+    outline: none; }
   .banner-block .btn-call-form:hover {
     box-shadow: 0px 0px 25px 10px rgba(255, 255, 255, 0.8); }
 
@@ -670,5 +671,27 @@ footer {
 
 #scroll-top:hover {
   opacity: 1; }
+
+#callback-popup .modal-title {
+  text-align: center;
+  color: #38969e;
+  font-size: 16pt;
+  font-weight: bold; }
+#callback-popup .form-wrapp button {
+  padding: 7px 10px;
+  background: #fff;
+  color: #4fd7e2;
+  font-size: 14pt;
+  text-align: center;
+  width: 100px;
+  margin: 0px auto;
+  display: block;
+  font-weight: bold;
+  border-color: #4fd7e2; }
+#callback-popup .form-wrapp .input-group-addon {
+  background: #fff;
+  color: #4fd7e2; }
+#callback-popup .form-wrapp .form-control {
+  border-color: #4fd7e2; }
 
 /*# sourceMappingURL=style.css.map */
