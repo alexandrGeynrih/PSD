@@ -495,7 +495,9 @@ header {
     background-color: #4fd7e2;
     position: relative;
     margin: 10px auto;
-    cursor: pointer; }
+    cursor: pointer;
+    display: block;
+    text-decoration: none; }
   #price-list .buy-btn:after {
     content: '';
     display: block;
@@ -672,15 +674,17 @@ footer {
 #scroll-top:hover {
   opacity: 1; }
 
+#order-popup .modal-title,
 #callback-popup .modal-title {
   text-align: center;
   color: #38969e;
   font-size: 16pt;
   font-weight: bold; }
+#order-popup .form-wrapp button,
 #callback-popup .form-wrapp button {
   padding: 7px 10px;
   background: #fff;
-  color: #4fd7e2;
+  color: #fff;
   font-size: 14pt;
   text-align: center;
   width: 100px;
@@ -688,10 +692,16 @@ footer {
   display: block;
   font-weight: bold;
   border-color: #4fd7e2; }
+#order-popup .form-wrapp .input-group-addon,
 #callback-popup .form-wrapp .input-group-addon {
   background: #fff;
   color: #4fd7e2; }
+#order-popup .form-wrapp .form-control,
 #callback-popup .form-wrapp .form-control {
+  border-color: #4fd7e2; }
+#order-popup .form-wrapp .btn-primary,
+#callback-popup .form-wrapp .btn-primary {
+  background-color: #4fd7e2;
   border-color: #4fd7e2; }
 
 /*# sourceMappingURL=style.css.map */

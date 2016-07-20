@@ -372,7 +372,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6 video-block">
-                <!--<iframe src="https://player.vimeo.com/video/34463132" width="100%" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>                -->
+                <iframe src="https://player.vimeo.com/video/34463132" width="100%" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>                
             </div>
             <div class="col-md-6">
              <div class="section-title text-left">
@@ -731,10 +731,9 @@
                         <li><b>All updates</b> are automatic.</li>
                     </ul>
                     
-                    <div class="buy-btn">
+                    <a class="buy-btn"  data-toggle="modal" data-target="#order-popup" href="#order-popup">
                         Buy
-                    </div>
-                    
+                    </a>                      
                 </div>
             </div>
             
@@ -757,10 +756,9 @@
                         <li><b>All updates</b> are automatic.</li>
                     </ul>
                     
-                    <div class="buy-btn">
+                    <a class="buy-btn"  data-toggle="modal" data-target="#order-popup" href="#order-popup">
                         Buy
-                    </div>
-                    
+                    </a>                      
                 </div>
             </div>
             
@@ -782,18 +780,14 @@
                         <li><b>All updates</b> are automatic.</li>
                     </ul>
                     
-                    <div class="buy-btn">
+                    <a class="buy-btn"  data-toggle="modal" data-target="#order-popup" href="#order-popup">
                         Buy
-                    </div>
-                    
+                    </a>                     
                 </div>
-            </div>
-           
+            </div>           
             
-        </div>
-        
-    </div>
-    
+        </div>        
+    </div>    
 </section>
 <!--/ Price block-->
 
@@ -875,7 +869,8 @@
         <div class="row">
             <div class="col-md-6">                
                 <div class="form-wrapp">
-                    <form method="post">
+                    <form method="post" action="php/mail.php">
+                        <input type="hidden" name="subject" value="Callback">
                    <div class="form-group">
                     <label class="sr-only" for="Name">Name</label>
                     <div class="input-group">                      
@@ -967,6 +962,7 @@
 
 
 <!-- Modal -->
+<!-- Callback popup -->
 <div class="modal fade" id="callback-popup" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -976,7 +972,8 @@
       </div>
       <div class="modal-body">
             <div class="form-wrapp">
-                <form method="post">
+                <form method="post" action="php/mail.php">
+                        <input type="hidden" name="subject" value="Callback">
                     <div class="form-group">
                      <label class="sr-only" for="Name">Name</label>
                      <div class="input-group">                      
@@ -1008,6 +1005,54 @@
     </div>
   </div>
 </div>
+
+
+
+<!-- Order form -->
+<div class="modal fade" id="order-popup" tabindex="-1" role="dialog" aria-labelledby="OrderLabelForM">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="OrderLabelForM">Thanks what choose us !</h4>
+      </div>
+      <div class="modal-body">
+            <div class="form-wrapp">                
+                <form method="post" action="php/mail.php">
+                    <input type="hidden" name="subject" value="Order form">
+                    <div class="form-group">
+                     <label class="sr-only" for="Name">Name</label>
+                     <div class="input-group">                      
+                       <input type="text" class="form-control" id="Name" placeholder="Name">
+                       <div class="input-group-addon"><i class="fa fa-user" aria-hidden="true"></i></div>                      
+                     </div>
+                   </div>
+                    
+                   <div class="form-group">
+                     <label class="sr-only" for="Phone">Phone</label>
+                     <div class="input-group">                      
+                       <input type="text" class="form-control" id="Phone" placeholder="Phone">
+                       <div class="input-group-addon"><i class="fa fa-phone" aria-hidden="true"></i></div>                      
+                     </div>
+                   </div>
+                   
+                   <div class="form-group">
+                     <label class="sr-only" for="Comments">Comments</label>
+                     <div class="input-group">                      
+                       <textarea class="form-control" id="Comments" name="" rows="3" placeholder="Comments"></textarea>
+                       <div class="input-group-addon"><i class="fa fa-comments" aria-hidden="true"></i></div>                      
+                     </div>
+                   </div>
+                     <button type="button" class="btn btn-primary">Buy <i class="fa fa-shopping-basket" aria-hidden="true"></i></button>                            
+              
+            </form>
+   </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 <!-- / Form popup-->
 
 
