@@ -1,0 +1,20 @@
+
+Light Landing Page via company providing other services.
+We hope you like it, we tried our best  :-)
+
+Features:
+
+- Responsive design
+- Bootstrap 3
+- Jquery
+- HTML 5
+- CSS 3
+- Saas
+- Animation
+- Font Awesome icons
+- Send web-forms  on E-mail with PHP
+
+
+
+
+

@@ -61,6 +61,7 @@ $(document).ready(function(){
                                                navText: ['<i class="fa fa-angle-left" aria-hidden="true"></i>','<i class="fa fa-angle-right" aria-hidden="true"></i>' ]
                                    });
     
+    /*Top menu. Scroll in section*/
     $(".menu-item").click(function(event){
         event.preventDefault();
         var sectionId=$(this).attr("href");
@@ -84,19 +85,21 @@ $(document).ready(function(){
         }
         else
             $("#scroll-top").hide();
-            
-        
-        
         
         
         
         /*fixed top menu*/
         
-        if ( scrollTop > 50 ) {            
+        if ($(window).width() >= 1000 ) {
+            
+            if ( scrollTop > 50 ) {            
             $("#top-bar").addClass("fixed") ;
         }
         else
-            $("#top-bar").removeClass("fixed") ;
+            $("#top-bar").removeClass("fixed") ;    
+            
+        }
+        
     
     });
      
