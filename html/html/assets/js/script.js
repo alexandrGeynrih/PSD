@@ -102,6 +102,40 @@ $(document).ready(function(){
         
     
     });
+   
+   
+   /* Email send */   
+   
+   $(".popup-form").on('submit', function(event){
+        event.preventDefault();
+        console.log("sdsa");
+        var action=$(this).attr("action");
+        var method=$(this).attr("method");
+        var data=$(this).serializeArray();
+        curentForm=this;
+        $.ajax({
+            url:action,
+            dataType :"json",
+            method : method ,
+            data: data,
+            cache : false,
+            success: function(data)
+                    {
+                        //Success
+                        if (typeof data.success != "undefine") {                            
+                          $(curentForm).children(".alert").addClass("alert-success").html( data.success +'<i class="fa fa-check" aria-hidden="true"></i>' );
+                        }
+                        //Error
+                        if (typeof data.error != "undefine") {                            
+                          $(curentForm).children(".alert").addClass("alert-danger").html( data.error );
+                        }
+                        
+                    }
+            
+            
+        })
+    return false;
+    });
      
     
 });

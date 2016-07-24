@@ -3,6 +3,7 @@
   #logo img {
     margin: 0px auto; }
 
+  /*Mobile menu*/
   #top-menu {
     position: static; }
     #top-menu #mob-menu-btn {
@@ -13,7 +14,9 @@
       position: absolute;
       left: 0%;
       width: 100%;
-      z-index: 100; }
+      z-index: 100;
+      box-shadow: 0px 5px 13px 2px #b3cacc;
+      padding-bottom: 8px; }
     #top-menu li {
       display: block;
       width: 100%;
@@ -27,6 +30,8 @@
       left: 0px;
       background: #4fd7e2; }
 
+  /* End Mobile menu*/
+  /* Stages */
   #stages .stage-wrapp {
     width: 100%; }
   #stages .item {
@@ -44,9 +49,36 @@
   #stages .item.final {
     margin-left: 0px; }
 
+  /* End Stages */
+  /*Contacts*/
   #contacts .form-wrapp {
     width: 80%;
-    margin-bottom: 20px; } }
+    margin-bottom: 20px; }
+
+  /* End Contacts*/
+  /*Banner*/
+  .banner-block {
+    margin: 15px auto; }
+    .banner-block h1 {
+      font-size: 25pt; }
+    .banner-block .content-text {
+      margin-top: 14px;
+      font-size: 15pt; }
+    .banner-block .btn-call-form {
+      font-size: 18pt; }
+
+  /* End Banner*/
+  /* Section title*/
+  .section-title .section-icon {
+    width: 85px;
+    height: 85px;
+    font-size: 30pt; }
+  .section-title .section-title {
+    font-size: 25pt; }
+
+  /* End Section title*/
+  /*Section description*/
+  /*End Section description*/ }
 /*Tablet*/
 @media screen and (max-width: 970px) {
   #price-list .price-box,

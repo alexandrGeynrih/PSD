@@ -869,27 +869,28 @@
         <div class="row">
             <div class="col-md-6">                
                 <div class="form-wrapp">
-                    <form method="post" action="php/mail.php">
+                    <form method="post" action="php/mail.php" class="popup-form">
+                        <div class="alert" role="alert"></div>
                         <input type="hidden" name="subject" value="Callback">
-                   <div class="form-group">
-                    <label class="sr-only" for="Name">Name</label>
-                    <div class="input-group">                      
-                      <input type="text" class="form-control" id="Name" placeholder="Name">
-                      <div class="input-group-addon"><i class="fa fa-user" aria-hidden="true"></i></div>                      
-                    </div>
-                  </div>
+                        <div class="form-group">
+                         <label class="sr-only" for="Name">Name</label>
+                         <div class="input-group">                      
+                           <input type="text" name="Name" class="form-control" id="Name" placeholder="Name">
+                           <div class="input-group-addon"><i class="fa fa-user" aria-hidden="true"></i></div>                      
+                         </div>
+                       </div>
                    
-                  <div class="form-group">
-                    <label class="sr-only" for="Phone">Phone</label>
-                    <div class="input-group">                      
-                      <input type="text" class="form-control" id="Phone" placeholder="Phone">
-                      <div class="input-group-addon"><i class="fa fa-phone" aria-hidden="true"></i></div>                      
-                    </div>
-                  </div>
+                        <div class="form-group">
+                          <label class="sr-only" for="Phone">Phone</label>
+                          <div class="input-group">                      
+                            <input type="text" name="Phone" class="form-control" id="Phone" placeholder="Phone">
+                            <div class="input-group-addon"><i class="fa fa-phone" aria-hidden="true"></i></div>                      
+                          </div>
+                        </div>
                   
-                  <button class="btn  btn-default">
-                    Send <i class="fa fa-paper-plane-o" aria-hidden="true"></i>
-                  </button>
+                        <button class="btn  btn-default" type="submit">
+                          Send <i class="fa fa-paper-plane-o" aria-hidden="true"></i>
+                        </button>
                   
                 </form>
                 </div>
@@ -972,12 +973,13 @@
       </div>
       <div class="modal-body">
             <div class="form-wrapp">
-                <form method="post" action="php/mail.php">
+                <form method="post" action="php/mail.php" class="popup-form">
+                    <div class="alert" role="alert"></div>
                         <input type="hidden" name="subject" value="Callback">
                     <div class="form-group">
                      <label class="sr-only" for="Name">Name</label>
                      <div class="input-group">                      
-                       <input type="text" class="form-control" id="Name" placeholder="Name">
+                       <input type="text" name="Name" class="form-control" id="Name" placeholder="Name">
                        <div class="input-group-addon"><i class="fa fa-user" aria-hidden="true"></i></div>                      
                      </div>
                    </div>
@@ -985,7 +987,7 @@
                    <div class="form-group">
                      <label class="sr-only" for="Phone">Phone</label>
                      <div class="input-group">                      
-                       <input type="text" class="form-control" id="Phone" placeholder="Phone">
+                       <input type="text" name="Phone" class="form-control" id="Phone" placeholder="Phone">
                        <div class="input-group-addon"><i class="fa fa-phone" aria-hidden="true"></i></div>                      
                      </div>
                    </div>
@@ -993,11 +995,11 @@
                    <div class="form-group">
                      <label class="sr-only" for="Comments">Comments</label>
                      <div class="input-group">                      
-                       <textarea class="form-control" id="Comments" name="" rows="3" placeholder="Comments"></textarea>
+                       <textarea class="form-control" id="Comments" name="Comments" rows="3" placeholder="Comments"></textarea>
                        <div class="input-group-addon"><i class="fa fa-comments" aria-hidden="true"></i></div>                      
                      </div>
                    </div>
-                     <button type="button" class="btn btn-primary">Send <i class="fa fa-paper-plane" aria-hidden="true"></i></button>                            
+                     <button type="submit" class="btn btn-primary">Send <i class="fa fa-paper-plane" aria-hidden="true"></i></button>                            
               
             </form>
    </div>
@@ -1018,12 +1020,16 @@
       </div>
       <div class="modal-body">
             <div class="form-wrapp">                
-                <form method="post" action="php/mail.php">
+                <form method="post" action="php/mail.php" class="popup-form">
+                    
+                    <div class="alert" role="alert"></div>
+                    
+                    
                     <input type="hidden" name="subject" value="Order form">
                     <div class="form-group">
                      <label class="sr-only" for="Name">Name</label>
                      <div class="input-group">                      
-                       <input type="text" class="form-control" id="Name" placeholder="Name">
+                       <input type="text" name="Name" class="form-control" id="Name" placeholder="Name">
                        <div class="input-group-addon"><i class="fa fa-user" aria-hidden="true"></i></div>                      
                      </div>
                    </div>
@@ -1031,7 +1037,7 @@
                    <div class="form-group">
                      <label class="sr-only" for="Phone">Phone</label>
                      <div class="input-group">                      
-                       <input type="text" class="form-control" id="Phone" placeholder="Phone">
+                       <input type="text" name="Phone" class="form-control" id="Phone" placeholder="Phone">
                        <div class="input-group-addon"><i class="fa fa-phone" aria-hidden="true"></i></div>                      
                      </div>
                    </div>
@@ -1039,11 +1045,11 @@
                    <div class="form-group">
                      <label class="sr-only" for="Comments">Comments</label>
                      <div class="input-group">                      
-                       <textarea class="form-control" id="Comments" name="" rows="3" placeholder="Comments"></textarea>
+                       <textarea class="form-control" id="Comments" name="Comments" rows="3" placeholder="Comments"></textarea>
                        <div class="input-group-addon"><i class="fa fa-comments" aria-hidden="true"></i></div>                      
                      </div>
                    </div>
-                     <button type="button" class="btn btn-primary">Buy <i class="fa fa-shopping-basket" aria-hidden="true"></i></button>                            
+                     <button type="submit" class="btn btn-primary">Buy <i class="fa fa-shopping-basket" aria-hidden="true"></i></button>                            
               
             </form>
    </div>
@@ -1051,11 +1057,7 @@
     </div>
   </div>
 </div>
-
-
 <!-- / Form popup-->
-
-
 
     
     
