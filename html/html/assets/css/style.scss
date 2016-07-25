@@ -1,0 +1,1235 @@
+$mainFont: 'Candara Regular';
+$mainColor: #4fd7e2;
+$section-title-color:#38969e;
+
+
+
+html, body
+{
+    margin: 0px ;
+    padding: 0px;
+    overflow-x: hidden;
+    font-family: $mainFont;    
+}
+
+
+
+header
+{
+    background: url(../images/headerBg.jpg) 0px 0px no-repeat ;
+    background-size: cover;
+    
+}
+
+#top-bar
+{
+    padding-top: 22px;
+    transition: all linear 0.3s;
+}
+
+#top-bar.fixed
+{
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    background: $mainColor;
+    width: 100%;
+    z-index: 500;
+    padding: 10px;
+    
+}
+
+#top-bar.fixed #top-menu li a
+{
+    font-size: 13pt;
+}
+#top-bar.fixed #top-phone
+{
+    font-size: 14pt;
+}
+
+#top-phone
+{
+    color:#fff;
+    font-size: 20pt;
+    padding-top: 14px;
+    text-align: center;
+    
+}
+
+#top-menu
+{
+       
+       #mob-menu-btn{
+            display: none;
+            color: #fff;
+            text-align: center;
+            font-size: 30pt;
+       }
+       
+        ul{
+            list-style: none;
+            padding: 0px;
+            padding-top: 17px;
+            text-align: center;
+        }     
+        
+    
+        li{
+            display: inline-block;
+            /*margin-right: 15px;*/
+        }
+        
+        li:last-child a{
+            /*margin-right: 0px;*/
+            padding-right: 0px;
+            padding-left: 0px;
+        }
+       
+        a {
+                color: #fff;
+                font-size: 16pt;
+                font-family: 'DaunPenh Regular';
+                position: relative;
+                text-decoration: none;
+                padding-left:7.5px;
+                padding-right:7.5px;                
+            }
+    
+        a:before
+        {
+            content: '';
+            display: block;
+            width:0%;
+            height: 1px;
+            background: #fff;
+            position: absolute;
+            z-index: 10;
+            top: 108%;
+            left: 100%;
+            transition: all linear 0.3s; 
+        }
+               
+        
+        a:after
+        {
+            content: '';
+            display: block;
+            width:1px;
+            height: 100%;
+            background: #fff;
+            position: absolute;
+            z-index: 20;
+            top: 0%;
+            right: 0px;
+            transition: all linear 0.3s; 
+        }
+        
+          li:last-child a:after
+        {
+            content: '';
+            display: none;
+            
+        }
+        
+        
+        a:hover:after
+        {        
+            height: 0px;
+            top:100%;            
+        }
+        a:hover:before
+        {
+            width: 100%;
+            left: 0%;
+        }
+        
+    
+}
+
+
+
+
+.banner-block
+{
+    margin: 80px auto;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    padding-bottom: 20px;
+    overflow: hidden;
+    
+    h1
+    {
+        font-size: 39pt;        
+        font-weight: normal;        
+    }
+    
+    .content-text
+    {        
+        margin-top: 30px;
+        font-size: 20pt;        
+    }
+    
+    .btn-call-form
+    {        
+        font-size: 25pt;        
+    }
+    
+    
+}
+
+
+
+.section-title
+{
+    
+    text-align: center;
+    padding-top: 52px;
+    padding-bottom: 20px;
+    
+    .section-icon
+    {
+        background: $mainColor;
+        display: inline-block;
+        font-size: 50pt;        
+        text-align: center;
+        padding-top: 15px;
+        color: #fff;
+        border-radius: 65px;
+        vertical-align: middle;
+        width: 120px;
+        height: 120px;
+    }
+    
+    .section-title
+    {
+        display: inline-block;
+        color: $section-title-color;
+        font-size: 35pt;
+        padding-left: 10px;
+        position: relative;
+        
+    }
+    .section-title:after
+    {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 100%;
+        width: 110%;
+        height: 1px;
+        left: -2%;
+        background: $mainColor;
+    }
+}
+
+.section-title.version-2
+{
+    @extend  .section-title;
+    
+    .section-icon
+    {
+        @extend .section-icon;
+        background-color:#fff;
+        color:$mainColor;
+    }
+    .section-title
+    {
+        @extend .section-title;
+        color:#fff;
+    }
+    
+    .section-title:after
+    {
+        @extend .section-title:after;
+        background:#fff; 
+    }
+    
+}
+
+
+.section-title.text-left
+{
+    text-align: left;
+}
+
+
+.section-description
+{
+    color:#4e4a4a;
+    font-size: 20pt;
+    padding-bottom: 20px;
+}
+
+/*Advantage list*/
+#advantage-list
+{
+    margin-top: 20px;
+    
+    .item
+    {
+        text-align: center;
+        padding-bottom: 25px;
+    }
+    .icon
+    {
+        color:$mainColor;
+        font-size: 40pt;
+    }
+    
+    .title
+    {
+        color:$section-title-color;
+        font-size: 20pt;
+    }
+    
+    .description
+    {
+        font-size: 14pt;
+        padding-top: 10px;
+    }
+    
+}
+/* End Advantage list*/
+
+
+/*Our works*/
+
+#our-works-carousel{
+    
+    .image-wrapp{
+        position: relative;
+    }
+    
+    
+    .image-wrapp:hover .work-info{
+        opacity: 1;
+    }
+    .item
+    {
+        padding: 10px 0px;
+    }
+    
+    .owl-prev,
+    .owl-next
+    {
+        display: inline-block;
+        /*padding: 5px 0px;*/
+        background: $mainColor;
+        border-radius: 65px;
+        position: absolute;
+        top: 50%;
+        width: 75px;
+        text-align: center;
+        font-size: 40pt;
+        font-weight: bold;        
+        color:#fff;
+        transition: all linear 0.2s;
+        
+    }
+    .owl-prev:hover,
+    .owl-next:hover
+    {
+        box-shadow: 0px 0px 5px 2px rgb(255,255,255);
+    }
+    
+    .owl-prev
+    {
+        left: 10px;
+    }
+     .owl-next
+    {
+        right: 10px;
+    }
+    
+     .owl-dots
+    {
+        text-align: center;
+    }
+    .owl-dot 
+    {
+        height: 10px;
+        width: 10px;
+        background: $mainColor;
+        display: inline-block;
+        margin-left: 10px;
+        margin-top: 10px;
+        border-radius: 70px;
+    }
+    .owl-dot.active
+    {
+        background: $section-title-color;        
+    }
+    
+    
+    .work-info{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0px;
+        top: 0px;
+        background: rgba(0,0,0,0.8);
+        opacity: 0;
+        transition: opacity ease-out 0.5s;
+        box-sizing: border-box;
+        padding:30px 10px ;
+        color:#fff;
+        text-align: center;
+        cursor: pointer;
+        box-shadow: 0px 0px 20px 5px $mainColor;
+        z-index: 100;
+        text-decoration: none;
+        display: block;
+        outline: none;
+    }
+    
+    .work-info h2
+    {
+        padding-bottom: 10px;
+        font-size: 25pt;
+    }
+    .work-info .description
+    {
+        padding-bottom: 10px;
+        font-size: 18pt;
+    }
+    .work-info .zoom
+    {
+        font-size: 20pt;
+        
+    }
+    
+}
+
+.about-text
+{
+    font-size: 13pt;
+}
+
+.video-block
+{
+    padding-top: 80px;
+}
+
+.video-preview 
+{
+    display: block;
+    text-align: center;    
+    border-radius: 50%;
+    background-repeat:no-repeat;
+    background-position: 50% 50%;
+    width: 300px;
+    height: 300px;
+    margin: 0px auto;
+    padding-top: 100px;
+    position: relative;
+    cursor: pointer;
+}
+
+.video-preview:after
+{
+    content: '';
+    display: block;
+    width: 100%;
+    height:100%;
+    top:0%;
+    left: 0%;
+    position: absolute;    
+    border:2px solid  $mainColor;
+    border-radius: 50%;
+    transition: all linear 0.3s;
+}
+
+.video-preview:hover:after
+{
+    top: -5%;
+    left: -5%;
+    width: 110%;
+    height: 110%;
+}
+
+.video-preview:hover,
+.video-preview:focus,
+.video-preview:active
+{
+    outline: none;
+    text-decoration: none;
+}
+
+
+
+
+
+/* End Our works*/
+
+/* Counters */
+#counters{
+    /*height: 1px;*/
+    
+    margin-top: 40px;
+    background: url(../images/pexels-photo.jpg) left top no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    
+    .counters-wrapp
+    {
+        padding: 90px 0px;
+    }
+    .container
+    {
+        height: 100%;
+    }
+    
+    .item
+    {
+        text-align: center;
+        color:#fff;        
+    }
+    
+    .item .icon
+    {
+        width: 86px;
+        height: 92px;
+        background:  url("../images/counterBg.png") left top no-repeat;
+        font-size: 36pt;
+        padding-top: 10px;
+        display: inline-block;
+    }
+    
+    .item .count
+    {
+        font-size: 18pt;
+        padding-top: 8px;
+        font-weight: bold;
+        font-family: Calibri;
+    }
+     .item .title
+     {
+        font-size: 16pt;
+     }
+    
+    
+}
+/* End Counters */
+
+.shadow-bg
+{
+    background: rgba(0,0,0,0.6 );
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+/* Stages */
+
+#stages
+{
+    $headerFont:'Candara';
+    $widthLink: 210px;
+    $heightLink:89px;
+    $heightLinkDown: 210px;
+    
+    
+    .stage-wrapp
+    {
+        width: 750px;
+        margin: 0px auto;
+    }
+    
+    .item
+    {
+        width: 225px;
+        padding: 8px 19px;
+        border: 3px solid $mainColor;
+        border-radius: 5px;
+        position: relative;
+    }
+    
+    .item .numb
+    {
+        
+        $width: 70px;
+        $height: 70px;
+        vertical-align: middle;
+        text-align: center;
+        font-size: 35pt;
+        width: $width;
+        height: $height;
+        border-radius: 68px;
+        border: 2px solid $mainColor;
+        position: absolute;
+        color: $mainColor;
+        top: #{-$width / 2};
+        right: #{-$height / 2};
+        background-color: #fff;
+    }
+    .item .title
+    {
+        font-size: 15pt;
+        color: $mainColor;
+        font-weight: bold;
+        font-family: $headerFont;
+        text-align: center;
+    }
+    .item .title .fa
+    {
+        vertical-align: middle;
+        font-size: 30pt;
+    }
+    .item .description
+    {
+        color: #0e1010;
+        font-size: 12pt;
+        padding-top: 8px;
+    }
+    
+    .link
+    {
+        position: absolute;        
+        width: $widthLink;
+        height: $heightLink;
+        right: -$widthLink;
+        bottom: -10px;        
+        background:  url(../images/stageLinkLeft.png) left top no-repeat;
+    }
+    
+    .item.right .link
+    {
+        background:  url(../images/stageLinkRight.png) left top no-repeat;        
+        bottom: -39px;
+        left: -195px;
+        
+    }
+    
+    .item .link.down
+    {
+        background:  url(../images/stageLinkDown.png) left top no-repeat;        
+        bottom: -$heightLinkDown;
+        left: 0px;
+        height: $heightLinkDown;
+        
+    }
+    .item.right
+    {
+        
+        margin-left: 400px;
+        margin-top: -46px;
+    }
+    
+    .item.final
+    {
+        margin-left: 200px;
+        margin-top: $heightLinkDown;
+    }
+    
+    .fireworks
+    {
+        position: absolute;
+        top: 0px;
+        
+    }
+    .fireworks:nth-child(1)
+    {
+        top: -80px;
+        right: -90px;        
+    }
+    .fireworks:nth-child(2)
+    {
+        top: -80px;
+        left: -58px;
+    }
+    .fireworks:nth-child(3)
+    {
+        top: 77px;
+        left: -62px;
+    }
+    .fireworks:nth-child(4)
+    {
+        top: -141px;
+        left: 73px;
+    }
+    .fireworks:nth-child(5)
+    {
+        top: 88px;
+        left: 202px;
+    }
+    
+    
+    
+    
+}   
+/* End Stages */
+
+/*Team*/
+    #team{
+        margin-top: 60px;
+        background: $mainColor;
+        padding-bottom: 20px;
+    }
+    
+    .section-title{
+        padding-top: 12px;
+    }
+    
+    #team-carousel
+    {
+        .item
+        {
+            background: #fff;
+            padding: 2px;
+            width: 304px;
+            box-shadow: 0px 0px 1px 1px #fff;
+            overflow: hidden;
+            margin: 0px auto;
+        }
+        
+        .photo
+        {
+            max-width: 300px;
+            width: 300px;
+            height: 298px;
+            max-height: 298px;
+            position: relative;
+        }
+        .photo:after
+        {
+            content: '';
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0px;
+            top: 0px;
+        }
+        
+        .info-wrapp
+        {
+            position: relative;
+            height: 80px;
+        }
+        
+        .info
+        {
+            color:$mainColor;
+            position: absolute;
+            width: 100%;
+            top: 0px;
+            background: #fff;
+            transition: all linear 0.4s;
+            
+        }
+        
+        .info .name{
+            padding-top: 8px;
+            text-align: center;
+            font-size: 20pt;
+        }
+        
+        .info .profession{
+            text-align: center;
+            font-size: 15pt;
+        }
+        
+        .info .links
+        {
+            text-align: center;            
+        }
+        .info .links a
+        {
+            color: $mainColor;
+            text-decoration: none;
+            font-size: 30pt;
+        }
+        
+        
+        .item:hover .photo:after
+        {
+            background-color: rgba(0,0,0,0.5);
+        }
+        
+        .item:hover .info
+        {
+            position: absolute;
+            top: -55px;
+        }
+               
+        
+    }
+/*End Team*/
+
+
+/*Prices*/
+#price-list
+{
+    
+    margin-bottom: 30px;
+    
+    .price-box-wrapper
+    {
+        padding-top: 50px;
+    }
+    .price-box
+    {
+        border: 2px solid $mainColor;
+        padding: 12px 0px;
+        width: 292px;
+        margin: 0px auto;
+        transition: all ease-in 0.2s;
+    }
+    .title
+    {
+        text-align: center;
+        color: $section-title-color;
+        font-size: 17pt;
+    }
+    
+    .price
+    {
+        width: 122px;
+        height: 120px;
+        margin: 0px auto;
+        background-color:$mainColor;
+        border-radius: 70px;
+        color: #fff;
+        font-size: 36pt;
+        text-align: center;
+        position: relative;
+        padding: 26px 0px;
+        font-family: Book Antiqua;
+        font-weight: bold;
+    }
+    
+    .price .fa
+    {
+        position: absolute;
+        font-size: 12pt;
+        right: 10px;
+        top: 35px;        
+    }
+    
+    .description
+    {
+        text-align: center;
+        color: $mainColor;
+        font-size: 18pt;
+    }
+    
+    .option-list
+    {
+        margin: 0px;
+        padding:0px;
+        list-style: none;
+    }
+    
+    .option-list li
+    {
+        color: $section-title-color;
+        font-size: 14pt;
+        text-align: center;
+        padding: 3px 3px;
+    }
+    .option-list li:after
+    {
+        content: '';
+        display: block;
+        width: 50%;
+        height: 1px;
+        background-color: $mainColor;
+        margin: 10px auto;
+    }
+    
+    
+    $buy-btn-width:178px;
+    $buy-btn-height:38px;
+    .buy-btn
+    {
+        width: $buy-btn-width;
+        height: $buy-btn-height;
+        box-sizing: border-box;
+        padding-top: 5px;
+        text-align: center;
+        font-weight: bold;
+        color: #fff;
+        font-size: 15pt;
+        background-color: $mainColor;
+        position: relative;
+        margin: 10px auto;
+        cursor: pointer;
+        display: block;
+        text-decoration: none;
+    }
+    .buy-btn:after
+    {
+        content: '';
+        display: block;
+        width: $buy-btn-width*0.95;
+        height: $buy-btn-height * 0.8;
+        left: #{$buy-btn-width*0.05 /2 };
+        top: #{$buy-btn-height*0.2 /2 };
+        position: absolute;
+        border: 2px solid #fff;        
+    }
+    
+    .buy-btn:hover:after
+    {        
+        border-width: 3px;
+    }
+    
+    
+    .price-box.center-price
+    {        
+        padding:40px 0px 20px 0px;
+        margin-top: -25px;
+        box-shadow: 0px 0px 10px 3px $mainColor;
+    }
+    
+    $scale:15%;
+    
+    .price-box.center-price .price:after
+    {   
+        content: '';
+        display: block;
+        width: 100% +  $scale;
+        height: 100% + $scale;
+        position: absolute;
+        left: #{-$scale/2};
+        top: #{-$scale/2};
+        border-radius: 70px;
+        border: 3px solid $mainColor;
+        
+    }
+    
+    .price-box.center-price .price
+    {
+        margin-top: #{$scale/4};
+        margin-bottom: #{$scale/4};
+    }
+    
+    .price-box:hover
+    {
+        transform: scale(1.05);
+    }
+    
+    
+}
+
+/* End Prices*/
+
+
+/*Rewievs*/
+#reviews-carousel{
+    width: 500px;
+    margin: 0px auto;
+    
+    .item
+    {
+        background: $mainColor;
+        padding-left: 100px;
+        position: relative;        
+        margin: 0px auto;
+        padding-bottom: 20px;
+        box-sizing: border-box;
+        padding-right: 10px;
+    }
+    .fa.fa-quote-left
+    {
+        position: absolute;
+        left: 10px;
+        top: 30px;
+        font-size: 40pt;
+        color: #fff;        
+    }
+    
+    .review-text
+    {
+        padding-top: 50px;
+        color:#fff;
+        font-size: 13pt;
+    }
+    .photo
+    {
+        display: inline-block;
+        vertical-align: middle;
+    }
+    .photo img
+    {
+        width: 80px;
+        height:80px;
+        border-radius: 70px;
+    }
+    
+    .autor-info
+    {
+        display: inline-block;
+        vertical-align: middle;
+        padding-left:8px;
+        color: #fff;
+        font-size: 13pt;
+    }
+    
+    .owl-prev,
+    .owl-next
+    {
+        display: inline-block;
+        /*padding: 5px 0px;*/
+        background: $mainColor;
+        border-radius: 65px;
+        position: absolute;
+        top: 50%;        
+        width: 75px;
+        text-align: center;
+        font-size: 40pt;
+        font-weight: bold;        
+        color:#fff;
+        transition: all linear 0.2s;
+        
+    }
+    .owl-prev:hover,
+    .owl-next:hover
+    {
+        box-shadow: 0px 0px 5px 2px rgb(255,255,255);
+    }
+    
+    .owl-prev
+    {
+        left: -20%;
+    }
+     .owl-next
+    {
+        right: -20%;
+    }
+    .owl-dots
+    {
+        text-align: center;
+    }
+    .owl-dot 
+    {
+        height: 10px;
+        width: 10px;
+        background: $mainColor;
+        display: inline-block;
+        margin-left: 10px;
+        margin-top: 10px;
+        border-radius: 70px;
+    }
+    .owl-dot.active
+    {
+        background: $section-title-color;        
+    }
+    
+    .btn-call-form
+    {
+        
+        background-color: $section-title-color;
+        color: #fff;
+        margin-left: 60px;
+        
+    }   
+    
+    
+    
+}
+/* End Rewievs*/
+
+/*Contacts*/
+#contacts
+{
+    background: $mainColor;
+    margin-top: 40px;
+    
+    .section-description
+    {
+        color: #fff;
+    }
+    
+    .form-wrapp
+    {
+        width: 270px;
+        margin: 0px auto;
+    }
+    
+    .form-wrapp button
+    {        
+        padding: 7px 10px;
+        background: #fff;
+        color: $mainColor;
+        font-size: 14pt;
+        text-align: center;
+        width: 60%;
+        margin: 0px auto;
+        display: block;
+        font-weight: bold;
+    }
+    
+    .form-wrapp .input-group-addon{
+        background: #fff;
+        color: $mainColor;        
+    }
+    .form-wrapp .form-control
+    {
+        border-color: $mainColor;        
+    }  
+  
+    
+    .contacts-list
+    {
+        margin: 0px;
+        padding: 0px;
+        list-style: none;
+    }
+    
+    .contacts-list li
+    {
+        color: #fff;
+        font-size: 13pt;
+        margin-bottom: 15px;
+    }
+    .contacts-list li .fa
+    {
+        font-size: 16pt;
+        margin-right: 8px;
+    }
+    
+    
+}
+/*End Contacts*/
+
+
+/* Footer */
+footer{
+    padding: 40px 0px;
+    background: $mainColor;
+    
+    #copyright
+    {
+        color: #fff;
+        font-size: 12pt;
+        padding-top: 20px;
+    }
+    .socnet-list
+    {
+        padding-top: 10px;
+    }
+    .bottom-logo img
+    {
+        margin: 0px auto;
+    }
+    
+    .socnet-list a
+    {
+        color: #fff;
+        font-size: 20pt;
+        text-decoration: none;
+    }
+}
+/* End Footer */
+
+#scroll-top
+{
+    width: 50px;    
+    background: $mainColor;
+    position: fixed;
+    text-align: center;
+    right: 10px;
+    bottom: 10px;
+    padding: 8px;
+    color: #fff;
+    font-size: 20pt;
+    z-index: 100;
+    opacity: 0.6;
+    cursor: pointer;
+    transition: all linear 0.3s;
+    display: none;
+}
+#scroll-top:hover
+{
+    opacity: 1;
+}
+
+
+#order-popup,
+#callback-popup {
+    
+    .modal-title{
+        text-align: center;
+        color: $section-title-color;
+        font-size: 16pt;
+        font-weight: bold;
+    }
+    
+    .form-wrapp button
+    {        
+        padding: 7px 10px;
+        background: #fff;
+        color: #fff;
+        font-size: 14pt;
+        text-align: center;
+        width: 100px;
+        margin: 0px auto;
+        display: block;
+        font-weight: bold;
+        border-color: $mainColor;        
+    }
+    
+    .form-wrapp .input-group-addon{
+        background: #fff;
+        color: $mainColor;        
+    }
+    .form-wrapp .form-control
+    {
+        border-color: $mainColor;        
+    }
+    
+    .form-wrapp .btn-primary
+    {
+        background-color: $mainColor;
+        border-color:$mainColor;
+    }
+    
+    
+}
+
+/* hide aniamations block, until not play */
+[data-animate="true"]
+{
+    visibility: hidden;
+}
+
+[data-animate="true"].animated
+{
+    visibility: visible;
+}
+
+/*  button  */
+
+.btn-call-form
+{
+    padding: 8px 25px;
+    background-color: $mainColor;
+    font-size: 10pt;
+    display: inline-block;
+    box-shadow:  0px 0px 15px 5px  rgba(255, 255, 255, 0.8);
+    border: 1px solid #fff;
+    margin-top: 40px;
+    color:#fff;
+    text-decoration: none;
+    transition: box-shadow ease 0.3s;
+    outline: none;
+}
+
+.btn-call-form:hover
+{
+    box-shadow:  0px 0px 25px 10px  rgba(255, 255, 255, 0.8);
+    color: #fff;
+    text-decoration: none;
+}
+
+.btn-call-form:focus,
+.btn-call-form:active
+{
+    outline: none;
+    text-decoration: none;
+    color: #fff;
+}
+

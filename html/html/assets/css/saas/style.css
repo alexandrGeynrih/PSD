@@ -9,8 +9,7 @@ header {
   background-size: cover; }
 
 #top-bar {
-  padding-top: 22px;
-  transition: all linear 0.3s; }
+  padding-top: 22px; }
 
 #top-bar.fixed {
   position: fixed;
@@ -104,7 +103,19 @@ header {
     margin-top: 30px;
     font-size: 20pt; }
   .banner-block .btn-call-form {
-    font-size: 25pt; }
+    padding: 8px 25px;
+    background-color: #4fd7e2;
+    font-size: 25pt;
+    display: inline-block;
+    box-shadow: 0px 0px 15px 5px rgba(255, 255, 255, 0.8);
+    border: 1px solid #fff;
+    margin-top: 40px;
+    color: #fff;
+    text-decoration: none;
+    transition: box-shadow ease 0.3s;
+    outline: none; }
+  .banner-block .btn-call-form:hover {
+    box-shadow: 0px 0px 25px 10px rgba(255, 255, 255, 0.8); }
 
 .section-title, .section-title.version-2, .section-title.version-2 .section-title {
   text-align: center;
@@ -243,43 +254,6 @@ header {
 
 .video-block {
   padding-top: 80px; }
-
-.video-preview {
-  display: block;
-  text-align: center;
-  border-radius: 50%;
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  width: 300px;
-  height: 300px;
-  margin: 0px auto;
-  padding-top: 100px;
-  position: relative;
-  cursor: pointer; }
-
-.video-preview:after {
-  content: '';
-  display: block;
-  width: 100%;
-  height: 100%;
-  top: 0%;
-  left: 0%;
-  position: absolute;
-  border: 2px solid #4fd7e2;
-  border-radius: 50%;
-  transition: all linear 0.3s; }
-
-.video-preview:hover:after {
-  top: -5%;
-  left: -5%;
-  width: 110%;
-  height: 110%; }
-
-.video-preview:hover,
-.video-preview:focus,
-.video-preview:active {
-  outline: none;
-  text-decoration: none; }
 
 /* End Our works*/
 /* Counters */
@@ -624,10 +598,6 @@ header {
     border-radius: 70px; }
   #reviews-carousel .owl-dot.active {
     background: #38969e; }
-  #reviews-carousel .btn-call-form {
-    background-color: #38969e;
-    color: #fff;
-    margin-left: 60px; }
 
 /* End Rewievs*/
 /*Contacts*/
@@ -733,37 +703,5 @@ footer {
 #callback-popup .form-wrapp .btn-primary {
   background-color: #4fd7e2;
   border-color: #4fd7e2; }
-
-/* hide aniamations block, until not play */
-[data-animate="true"] {
-  visibility: hidden; }
-
-[data-animate="true"].animated {
-  visibility: visible; }
-
-/*  button  */
-.btn-call-form {
-  padding: 8px 25px;
-  background-color: #4fd7e2;
-  font-size: 10pt;
-  display: inline-block;
-  box-shadow: 0px 0px 15px 5px rgba(255, 255, 255, 0.8);
-  border: 1px solid #fff;
-  margin-top: 40px;
-  color: #fff;
-  text-decoration: none;
-  transition: box-shadow ease 0.3s;
-  outline: none; }
-
-.btn-call-form:hover {
-  box-shadow: 0px 0px 25px 10px rgba(255, 255, 255, 0.8);
-  color: #fff;
-  text-decoration: none; }
-
-.btn-call-form:focus,
-.btn-call-form:active {
-  outline: none;
-  text-decoration: none;
-  color: #fff; }
 
 /*# sourceMappingURL=style.css.map */

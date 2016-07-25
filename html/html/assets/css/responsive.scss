@@ -13,9 +13,11 @@ $tablet-width:970px;
     }
     
   
+  /*Mobile menu*/
   #top-menu
   {
     position: static;
+    
     
     #mob-menu-btn
     {
@@ -30,7 +32,8 @@ $tablet-width:970px;
         left: 0%;
         width: 100%;
         z-index: 100;
-        
+        box-shadow: 0px 5px 13px 2px #b3cacc;
+        padding-bottom: 8px;
     }
     
     li
@@ -53,7 +56,8 @@ $tablet-width:970px;
     
     
   }
-  
+   /* End Mobile menu*/
+  /* Stages */
   #stages{
     .stage-wrapp
     {
@@ -84,13 +88,60 @@ $tablet-width:970px;
     }
     
   }
+  /* End Stages */
   
+  /*Contacts*/
   #contacts .form-wrapp
   {
     width: 80%;
     margin-bottom: 20px;
+  }  
+  /* End Contacts*/
+  
+  /*Banner*/
+  .banner-block
+  {
+    margin: 15px auto;
+
+     h1
+    {
+        font-size: 25pt;
+    }    
+    
+     .content-text {
+        margin-top: 14px;
+        font-size: 15pt;
+    }
+     .btn-call-form
+     {
+        font-size: 18pt;
+     }
   }
+  /* End Banner*/
+  
+  /* Section title*/
+  .section-title
+  {
+        .section-icon
+        {
+            width: 85px;
+            height: 85px;
+            font-size: 30pt;
+        }
+        
+        .section-title
+        {
+            font-size: 25pt;
+        }
+  }
+ /* End Section title*/
  
+ /*Section description*/
+ .section-description
+ {
+    
+ }
+ /*End Section description*/
 
 }
 

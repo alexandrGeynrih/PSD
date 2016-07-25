@@ -35,6 +35,9 @@ $(document).ready(function(){
      $(".magnific").magnificPopup({type:'image'});
      
      
+     /* About us  video popup */
+     $("#video-about-us").magnificPopup({type:'iframe'});
+     
      /* Team carousel */
     $("#team-carousel").owlCarousel({nav : false,
                                    responsive:{
